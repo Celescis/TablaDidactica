@@ -1,0 +1,134 @@
+.contenedor {
+  position: fixed;
+  --background: radial-gradient(circle at 50% -20.71%, #fbf3e6 0, #f9eddd 10%, #f7e5d3 20%, #f5ddc9 30%, #f4d3bf 40%, #f2c9b5 50%, #f0beac 60%, #efb5a6 70%, #edaba1 80%, #eca39f 90%, #e99b9f 100%);
+  --overflow: hidden;
+  --overscroll-behavior-y: none;
+  display: flex;
+}
+
+@media screen and (orientation: landscape) {
+  ion-content {
+    --overflow: auto !important;
+    --overscroll-behavior-y: contain !important;
+  }
+}
+
+ion-header {
+  height: 70px;
+  background-color: transparent;
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.headert {
+  font-size: 50px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  justify-content: center;
+  text-align: center;
+}
+
+.gif {
+  height: 100px;
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+
+.alert-danger.mensajeError {
+  font-size: 0.7rem;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.card {
+  margin-top: 20px;
+  box-shadow: 2px 40px 50px rgba(1, 1, 1, 0.5);
+}
+
+ion-card-content {
+  padding-bottom: 20px;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  min-height: 200px;
+}
+
+.ion-item {
+  margin-top: -3.5%;
+  border: 2px solid #6a64ff;
+  border-radius: 35px;
+  justify-content: space-evenly;
+  color: black;
+}
+
+.botonimg {
+  width: 50px;
+  height: 50px;
+}
+
+.parrafos {
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  margin-left: 4px;
+  margin-bottom: 50px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 800;
+  font-size: medium;
+}
+
+.button-container {
+  font-size: medium;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.custom-fab-final {
+  // margin-left: 305px;
+  margin-top: -40px;
+}
+
+.custom-fab-medio {
+  margin-top: -40px;
+  // margin-left: -2px;
+}
+
+.custom-fab-inicio {
+  // margin-left: -305px;
+  margin-top: -40px;
+}
+
+//SPINNER
+@keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.custom-spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+  z-index: 1;
+}
+
+.custom-spinner-container img {
+  -webkit-animation: rotate-center 1s ease-in-out infinite both;
+  animation: rotate-center 1s ease-in-out infinite both;
+  width: 80px;
+  height: 80px;
+}

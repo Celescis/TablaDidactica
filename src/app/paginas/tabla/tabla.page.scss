@@ -1,0 +1,134 @@
+//header
+.botonSalir {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(0%, -50%);
+  color: black;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ion-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.ion-fab-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 10px;
+}
+
+ion-fab:not(:last-child) {
+  margin-right: 70px;
+}
+
+.ion-fab {
+  margin: 0;
+}
+
+.titleH {
+  text-transform: uppercase;
+  margin-left: -80px;
+}
+
+//content
+.contenido {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  overflow-x: hidden;
+  overflow: visible;
+}
+
+.backAnimal {
+  background-color: #464646;
+  background-blend-mode: overlay;
+  opacity: 1;
+  background-image: url('/assets/background/backanimales.jfif');
+  background-size: cover;
+}
+
+.backColor {
+  background-color: #464646;
+  background-blend-mode: overlay;
+  opacity: 1;
+  background-image: url('/assets/background/backcolores.jpg');
+  background-size: cover;
+}
+
+.backNumero {
+  background-color:#464646;
+  background-blend-mode: overlay;
+  opacity: 1;
+  background-image: url('/assets/background/backnumeros.jfif');
+  background-size: cover;
+}
+
+.columna {
+  flex-basis: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+//BOTON
+.boton-tabla {
+  width: 100%;
+  height: 100%;
+  --background: transparent;
+  --color: var(--ion-color-primary);
+  --border-radius: 0;
+  transition: background-color -3s ease-out;
+  box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.boton-tabla:active {
+  background-color: green;
+  border-color: green;
+}
+
+//IMAGENES
+.imagen-boton {
+  width: 100px;
+  height: 100px;
+}
+
+//SPINNER
+.spinner {
+  transform: translateX(0%);
+  z-index: 1;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.custom-spinner {
+  zoom:4;
+}
+
+//goodbye
+ion-loading {
+  --inner-padding: 0;
+ z-index: 10;
+  --spinner-margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gifbye {
+  width: 230px; // Ajusta este valor para cambiar
+}

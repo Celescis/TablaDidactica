@@ -1,0 +1,88 @@
+<ion-content [fullscreen]="true" overflow-scroll="false" class="contenedor">
+
+  <ion-card-header>
+    <ion-header>
+      <ion-title color="tertiary" class="centered-title headert">BIENVENIDOS</ion-title>
+    </ion-header>
+  </ion-card-header>
+  <ion-card class="card" color="dark">
+    <img class="gif" src="/assets/background/patitagif.gif" alt="gif" />
+
+    <ion-card-content>
+      <form (submit)="Login()">
+        <ion-item class="ion-item" color="light">
+          <ion-input aria-label="Correo" [clearOnEdit]="true" type="email" [formControl]="correo" placeholder="Correo"
+            errorText="Correo invalido" helperText="Ingrese un correo valido"></ion-input>
+
+        </ion-item>
+        <div class="alert alert-danger mensajeError mt-1 bi bi-exclamation-octagon-fill"
+          [hidden]="correo.valid || (correo.pristine && correo.untouched)">
+
+          <span *ngIf="correo.errors?.['required']">
+            Este campo es obligatorio
+          </span>
+
+          <span *ngIf="correo.errors?.['email']">
+            Debe contener @
+          </span>
+
+        </div>
+        <br>
+        <br>
+        <ion-item class="ion-item" color="light">
+
+          <ion-input aria-label="Contraseña" [clearOnEdit]="true" type="password" placeholder="Contraseña"
+            [formControl]="password" [counter]="true" maxlength="8" errorText="Contraseña incorrecta"></ion-input>
+
+        </ion-item>
+        <div class="alert alert-danger mensajeError mt-1 bi bi-exclamation-octagon-fill"
+          [hidden]="password.valid || (password.pristine && password.untouched)">
+
+          <span *ngIf="password.errors?.['required']">
+            Este campo es obligatorio
+          </span>
+
+          <span *ngIf="password.errors?.['minlength']">
+            Debe tener como minimo 6 caracteres
+          </span>
+
+        </div>
+        <br>
+        <div>
+          <ion-button expand="block" shape="round" color="tertiary" type="submit"> Ingresar </ion-button>
+        </div>
+
+        <div class="parrafos">
+          <p>Admin</p>
+          <p>Usuario</p>
+          <p>Invitado</p>
+        </div>
+
+        <div class="button-container">
+          <ion-fab class="custom-fab-inicio" horizontal="start">
+            <ion-fab-button color="tertiary" (click)="CargaUsuarios(1)">
+              <img src="/assets/background/gato1.png" alt="">
+            </ion-fab-button>
+          </ion-fab>
+          <ion-fab class="custom-fab-medio" horizontal="center">
+            <ion-fab-button color="tertiary" (click)="CargaUsuarios(2)">
+              <img src="/assets/background/gato2.png" alt="">
+            </ion-fab-button>
+          </ion-fab>
+          <ion-fab class="custom-fab-final" horizontal="end">
+            <ion-fab-button color="tertiary" (click)="CargaUsuarios(3)">
+              <img src="/assets/background/gato3.png" alt="">
+            </ion-fab-button>
+          </ion-fab>
+        </div>
+
+      </form>
+    </ion-card-content>
+  </ion-card>
+  <div class="custom-spinner-container" *ngIf="showSpinner" >
+    <!-- ponerle duration="3000"? -->
+    <img src="assets/icon/icon.png" alt="Custom Spinner" />
+    Cargando...
+  </div>
+  <!-- <ion-loading trigger="open-loading" message="Iniciando Sesión.." duration="2000"></ion-loading> -->
+</ion-content>
